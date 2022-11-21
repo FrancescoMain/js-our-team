@@ -1,4 +1,20 @@
+// elemento da id
 
+function eleId(id) {
+    let iteam = document.getElementById(id);
+    return iteam;
+}
+
+// creazione elemento
+function creaEle(elemento) {
+    let iteam = document.createElement(elemento)
+    return iteam;
+}
+
+// aggingi classe 
+function addClass(elemento,classe) {
+    elemento.classList.add(classe);
+}
 
 
 

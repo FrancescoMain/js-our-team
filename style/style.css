@@ -38,7 +38,18 @@ img {
 
 /* ms */
 
+.ms_card {
 
+    text-align: center;
+
+}
+
+.ms_card_obj {
+
+    text-align: center;
+    display: block;
+
+}
 /* bs rules  */
 
 

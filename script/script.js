@@ -4,6 +4,8 @@
 
 // MILESTONE 0:
 // Creare l’array di oggetti con le informazioni fornite.
+
+const img1 = create
 const listaMembri = [
 
   {
@@ -40,22 +42,43 @@ const listaMembri = [
 
 // MILESTONE 1:
 // Stampare su console, per ogni membro del team, le informazioni di nome, ruolo e la stringa della foto
-
-// 1.1: creiamo un ciclo che ripercorre l'array 
-for (let index = 0; index < listaMembri.length; index++) {
-  let membroIesimo = listaMembri[index];
-  console.log(membroIesimo);
-  // 1.2: creaiamo un ciclo che ripercorre le caratteristiche degli oggetti 
-  for (let info in membroIesimo) {
-      console.log(info, membroIesimo[info]);
-    
+  // 1.1: creiamo un ciclo che ripercorre l'array 
+  for (let index = 0; index < listaMembri.length; index++) {
+    // 2.1:dichiaro le varibili
+    let col = eleId("obj"+(index+1));
+    let membroIesimo = listaMembri[index];
+    // 2.2 aggiungo le classi al container 
+    addClass(col,"ms_card")
+  
+    // 1.2: creaiamo un ciclo che ripercorre le caratteristiche degli oggetti 
+    for (let info in membroIesimo) {
+      // 2.3 creo gli elementi
+        let contenuto = membroIesimo[info];
+        let container = creaEle("div");
+        // 2.4 aggiungo le classi al container 
+        addClass(container,"ms_card_obj");
+        // 2.5 appendo il contenuto al container e alla colonna 
+        container.append(contenuto);
+        col.append(container) ;
+      
+    }
   }
-}
 
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
+
+
+
 // BONUS 1:
 // Trasformare la stringa foto in una immagine effettiva
-// BONUS 2:
-// Organizzare i singoli membri in card/schede
+
+
+
+
+
+
+
+
+  
+
