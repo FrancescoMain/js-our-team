@@ -38,23 +38,23 @@ img {
 
 /* ms */
 
+.ms_testo {
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
 .ms_card {
 
     text-align: center;
     background-color: aliceblue;
+    margin: 20px 0;
 
 
 }
 
-.ms_card_obj {
-
-    text-align: center;
-    display: block;
-    margin: 10px;
-    padding-bottom: 10px;
 
 
-}
 
 
 /* bs rules  */
