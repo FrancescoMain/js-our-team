@@ -5,7 +5,7 @@
 // MILESTONE 0:
 // Creare l’array di oggetti con le informazioni fornite.
 
-const img1 = create
+
 const listaMembri = [
 
   {
@@ -48,18 +48,42 @@ const listaMembri = [
     let col = eleId("obj"+(index+1));
     let membroIesimo = listaMembri[index];
     // 2.2 aggiungo le classi al container 
-    addClass(col,"ms_card")
+    addClass(col,"ms_card");
+    
   
     // 1.2: creaiamo un ciclo che ripercorre le caratteristiche degli oggetti 
     for (let info in membroIesimo) {
+
       // 2.3 creo gli elementi
-        let contenuto = membroIesimo[info];
-        let container = creaEle("div");
-        // 2.4 aggiungo le classi al container 
-        addClass(container,"ms_card_obj");
-        // 2.5 appendo il contenuto al container e alla colonna 
-        container.append(contenuto);
-        col.append(container) ;
+      let contenuto = membroIesimo[info];
+      let container = creaEle("div");
+      // 2.4 aggiungo le classi al container 
+      addClass(container,"ms_card_obj");
+
+      // BONUS 1:
+      // Trasformare la stringa foto in una immagine effettiva
+
+      // B1.1: se sto analizzando le foto le sostituisco con un imagine effettiva
+      if (info == "foto") {
+        
+        let foto = creaEle("img");
+        foto.src = "img/" + membroIesimo[info];
+        membroIesimo[info] = foto;
+        console.log(membroIesimo);
+        // B1.2 metto le foto in un container diverso per averle sopra al resto 
+        let cont = eleId("foto"+(index+1));
+        cont.append(foto)
+        
+      } else {
+
+      // 2.5 appendo il contenuto restante  al container e alla colonna 
+      container.append(contenuto);
+      col.append(container) ;
+
+      }
+
+
+
       
     }
   }
@@ -70,8 +94,8 @@ const listaMembri = [
 
 
 
-// BONUS 1:
-// Trasformare la stringa foto in una immagine effettiva
+
+
 
 
 

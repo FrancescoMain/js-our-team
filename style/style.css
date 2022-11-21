@@ -17,7 +17,7 @@ body {
 
 img {
 
-   max-width: 100%;;
+   max-width: 100%;
  
 
 }
@@ -41,6 +41,8 @@ img {
 .ms_card {
 
     text-align: center;
+    background-color: aliceblue;
+
 
 }
 
@@ -48,8 +50,13 @@ img {
 
     text-align: center;
     display: block;
+    margin: 10px;
+    padding-bottom: 10px;
+
 
 }
+
+
 /* bs rules  */
 
 
